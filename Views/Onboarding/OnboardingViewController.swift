@@ -15,20 +15,24 @@ class OnboardingViewController: UIViewController {
     
     var slides: [OnboardingSlide] = []
     
+    var currentPage = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         
         slides = [
-            OnboardingSlide(title: "Comfortable Workplace", description: "As you embark on your journey to success, we invite you to experience the transformative power of a comfortable workplace.", image: UIImage(named: "firstOnboardingImage")!),
-            OnboardingSlide(title: "Expressive art space", description: "Step into a realm  imagination knows no bounds", image: Images.secondOnboardingImage),
-            OnboardingSlide(title: "Pleasant coffee day-starter", description: "Energized and uplifted, you're ready to face whatever the day brings, knowing that the essence of this morning sanctuary will linger in your heart until you return once more.", image: UIImage(named: "thirdOnboardingImage")!)
-        ]
-        
-        
+            OnboardingSlide(title: OnbordingTitle.first,
+                            description: OnbordingDescription.first,
+                            image: OnboardingImages.first),
+            OnboardingSlide(title: OnbordingTitle.second,
+                            description: OnbordingDescription.second,
+                            image: OnboardingImages.second),
+            OnboardingSlide(title: OnbordingTitle.third,
+                            description: OnbordingDescription.third,
+                            image: OnboardingImages.third) ]
     }
-    
 
     @IBAction func nextButtonClicked(_ sender: UIButton) {
         
@@ -50,6 +54,12 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height:    collectionView.frame.height)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let width = scrollView.frame.width
+        currentPage = Int(scrollView.contentOffset.x / width)
+        pageControl.currentPage = currentPage
     }
 }
 
