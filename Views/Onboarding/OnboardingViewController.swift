@@ -22,7 +22,7 @@ class OnboardingViewController: UIViewController {
         
         slides = [
             OnboardingSlide(title: "Comfortable Workplace", description: "As you embark on your journey to success, we invite you to experience the transformative power of a comfortable workplace.", image: UIImage(named: "firstOnboardingImage")!),
-            OnboardingSlide(title: "Expressive art space", description: "Step into a realm  imagination knows no bounds", image: UIImage(named: "secondOnboardingImage")!),
+            OnboardingSlide(title: "Expressive art space", description: "Step into a realm  imagination knows no bounds", image: Images.secondOnboardingImage),
             OnboardingSlide(title: "Pleasant coffee day-starter", description: "Energized and uplifted, you're ready to face whatever the day brings, knowing that the essence of this morning sanctuary will linger in your heart until you return once more.", image: UIImage(named: "thirdOnboardingImage")!)
         ]
         
@@ -52,4 +52,5 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: collectionView.frame.width, height:    collectionView.frame.height)
     }
 }
+
 
