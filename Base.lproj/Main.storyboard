@@ -56,7 +56,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardiongCollectionViewCell" id="eI2-Sv-0sN" customClass="OnboardiongCollectionViewCell" customModule="artpresso" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="6" width="414" height="626"/>
+                                        <rect key="frame" x="0.0" y="52" width="414" height="626"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hnx-s0-pZH">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="626"/>
@@ -160,7 +160,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WUA-X6-6DN">
-                                <rect key="frame" x="-2" y="810" width="414" height="52"/>
+                                <rect key="frame" x="-3" y="809" width="415" height="53"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
@@ -173,10 +173,11 @@
                         <viewLayoutGuide key="safeArea" id="Y8e-2g-How"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FZn-VT-PSv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MEU-dC-vqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1846.564885496183" y="10.563380281690142"/>
+            <point key="canvasLocation" x="2755.072463768116" y="2.6785714285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z57-9n-Fau">
@@ -195,6 +196,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWJ-T2-0fR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fVJ-6B-jyH">
+            <objects>
+                <navigationController storyboardIdentifier="homeNC" automaticallyAdjustsScrollViewInsets="NO" id="zyr-Et-Znv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h4c-Bf-Wrl">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4hb-3W-raG" kind="relationship" relationship="rootViewController" id="vj2-lo-Jca"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="71v-d8-1hx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844.9275362318842" y="2.6785714285714284"/>
         </scene>
     </scenes>
     <resources>

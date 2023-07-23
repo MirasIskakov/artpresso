@@ -8,14 +8,23 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
     var slides: [OnboardingSlide] = []
     
-    var currentPage = 0
+    var currentPage = 0 {
+        didSet {
+            pageControl.currentPage = currentPage
+            if currentPage == slides.count - 1 {
+                nextButton.setTitle("Registration", for: .normal)
+            } else {
+                nextButton.setTitle("Next", for: .normal)
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +42,23 @@ class OnboardingViewController: UIViewController {
                             description: OnbordingDescription.third,
                             image: OnboardingImages.third) ]
     }
-
+    
     @IBAction func nextButtonClicked(_ sender: UIButton) {
-        
+        if currentPage == slides.count - 1 {
+            let conntroller = storyboard?.instantiateViewController(identifier: "homeNC") as! UINavigationController
+            conntroller.modalPresentationStyle = .fullScreen
+            conntroller.modalTransitionStyle = .coverVertical
+            present(conntroller, animated: true, completion: nil)
+        } else {
+            currentPage += 1
+            let indexPath = IndexPath(item: currentPage, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
     }
     
-
 }
+
+
 
 
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -59,7 +78,7 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
         currentPage = Int(scrollView.contentOffset.x / width)
-        pageControl.currentPage = currentPage
+        
     }
 }
 
