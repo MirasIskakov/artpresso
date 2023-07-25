@@ -14,7 +14,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkForUnboard()
+        setUpElemants()
         // Do any additional setup after loading the view.
+    }
+    
+    func setUpElemants() {
+        
     }
     
     func checkForUnboard(){
