@@ -21,8 +21,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpElements()
 
-        
         // Do any additional setup after loading the view.
     }
     

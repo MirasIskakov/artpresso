@@ -11,6 +11,11 @@ class ViewController: UIViewController {
     
     let userDefaults = UserDefaults.standard.bool(forKey: "hasLaunched")
 
+    
+    @IBOutlet weak var singUpBotton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkForUnboard()
@@ -19,7 +24,8 @@ class ViewController: UIViewController {
     }
     
     func setUpElemants() {
-        
+        Utilitirs.styleFillBotton(singUpBotton)
+        Utilitirs.styleFillBotton(loginButton)
     }
     
     func checkForUnboard(){
