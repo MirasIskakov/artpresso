@@ -33,7 +33,6 @@ class SignUpViewController: UIViewController {
         
         // hide error label
         errorLabel.alpha = 0
-        
         //style elements
         Utilitirs.styleTextFild(firstNameTextField)
         Utilitirs.styleTextFild(lastNameTextField)
@@ -41,10 +40,27 @@ class SignUpViewController: UIViewController {
         Utilitirs.styleTextFild(passwordTextField)
         
         Utilitirs.styleFillBotton(signUpButton)
-        
+    
     }
     
+    // Проветка текстФилда на корекнтое заполнение
+    func validateFialds() -> String? {
+        
+        if firstNameTextField.text?
+        
+        
+        return nil
+    }
+    
+    
+    
     @IBAction func signUpTapped(_ sender: Any) {
+        
+        // Validate the fialds
+        
+        // Create the user
+        
+        // transition to the home screan
     }
     
 }
