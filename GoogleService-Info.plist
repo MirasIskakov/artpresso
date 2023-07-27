@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>125577117453-5ur981lqsu311a4c8amptmjogr0lvb9k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.125577117453-5ur981lqsu311a4c8amptmjogr0lvb9k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBzDcJ-OoLZgu96wzvExc5NVppCXPzcqXw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>125577117453</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Iskakov.artpresso</string>
+	<key>PROJECT_ID</key>
+	<string>artpresso-3a6d3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>artpresso-3a6d3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:125577117453:ios:933d2124a91a4855e2fa44</string>
+</dict>
+</plist>
