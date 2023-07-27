@@ -46,7 +46,9 @@ class SignUpViewController: UIViewController {
     // Проветка текстФилда на корекнтое заполнение
     func validateFialds() -> String? {
         
-        if firstNameTextField.text?
+        if ((firstNameTextField.text?) != nil) {
+            
+        }
         
         
         return nil
